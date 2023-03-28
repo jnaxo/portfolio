@@ -28,10 +28,10 @@ const Input = ({ onCommand }: InputProps) => {
 
   return (
     <div className="flex">
-      <span className="mr-2">guest@zeek.com:~$</span>
+      <span className="mr-2 text-custom-primary">guest@zeek.com:~$</span>
       <input
         autoFocus
-        className="border-2 border-blue-800 block w-full focus:outline-none focus:ring focus:ring-violet-300"
+        className="block w-full focus:outline-none"
         onBlur={handleInputBlur}
         onChange={handleInputChange}
         onKeyDown={handleKeyDown}

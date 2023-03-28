@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .command {
+    @apply
+    text-custom-primary
+  }
+  .description {
+    @apply
+    text-gray-400
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,4 +20,8 @@
   font-family: "cursor", monospace;
   scroll-behavior: smooth;
   color-scheme: dark;
+}
+
+.text-shadow {
+  text-shadow: 0 0 5px #c5d928;
 }
