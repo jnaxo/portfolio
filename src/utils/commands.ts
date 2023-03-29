@@ -15,12 +15,16 @@ export const commands = {
     func: 'runHelp',
     description: 'Show a list of available commands.'
   },
+  history: {
+    func: 'runHistory',
+    description: 'View command history.'
+  },
   projects: {
     func: 'runProjects',
     description: 'Describe my participation on relevant projects.'
   },
   skills: {
-    func: 'funSkills',
+    func: 'runSkills',
     description: 'Show a list of my main skills.',
   },
   social: {
@@ -38,7 +42,7 @@ const implementations = {
     // WIP
     return 'Work in progress...';
   },
-  runClear: (callback: Function) => {
+  runClear: (_: string, callback: Function) => {
     setTimeout(() => {
       callback('');
     }, 50);
@@ -58,14 +62,21 @@ const implementations = {
             </div>
           </li>
         `;
-      }).join('')}
+  }).join('')}
+    </ul>
+  `,
+  runHistory: (args: string) => `
+    <ul class="ml-5">
+      ${args.split(',').filter(h => h).map((h, idx) => `
+        <li><div class="font-medium"><span class="description">${idx + 1}</span> ${h}</div></li>
+      `).join('')}
     </ul>
   `,
   runProjects: () => {
     // WIP
     return 'Work in progress...';
   },
-  funSkills: () => {
+  runSkills: () => {
     // WIP
     return 'Work in progress...';
   },
@@ -81,10 +92,16 @@ const implementations = {
   `
 };
 
-export const runCommand: RunCommandFunc = (command, callback) => {
+export const runCommand: RunCommandFunc = (statement, callback) => {
+  const statements = statement.split(' ');
+  const command = statements[0];
+  const args = statements.length && statements[1] || '';
+  if (command === '') {
+    return '';
+  }
   if (!Object.keys(commands).some(k => k === command)) {
     return 'error: command not found!';
   }
   const selectedCommand = commands[command as keyof typeof commands];
-  return implementations[selectedCommand.func as keyof typeof implementations](callback || (() => {}));
+  return implementations[selectedCommand.func as keyof typeof implementations](args, callback || (() => { }));
 };
