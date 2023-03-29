@@ -67,7 +67,7 @@ const implementations = {
   `,
   runHistory: (args: string) => `
     <ul class="ml-5">
-      ${args.split(',').filter(h => h).map((h, idx) => `
+      ${args.split('<>').filter(h => h).map((h, idx) => `
         <li><div class="font-medium"><span class="description">${idx + 1}</span> ${h}</div></li>
       `).join('')}
     </ul>
@@ -94,8 +94,8 @@ const implementations = {
 
 export const runCommand: RunCommandFunc = (statement, callback) => {
   const statements = statement.split(' ');
-  const command = statements[0];
-  const args = statements.length && statements[1] || '';
+  const command = statements.shift();
+  const args = statements.length && statements.join(' ') || '';
   if (command === '') {
     return '';
   }

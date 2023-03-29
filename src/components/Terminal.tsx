@@ -13,7 +13,7 @@ const Terminal = () => {
     if (input !== '') {
       setHistory(prev => [...prev, input]);
     }
-    const statement = input === 'history' ? `${input} ${history.join(',')}` : input;
+    const statement = input === 'history' ? `${input} ${history.join('<>')}` : input;
     setOutput(
       prev => `
       ${prev}
