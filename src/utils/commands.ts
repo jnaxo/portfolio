@@ -68,10 +68,38 @@ const implementations = {
       `).join('')}
     </ul>
   `,
-  runProjects: () => {
-    // WIP
-    return 'Work in progress...';
-  },
+  runProjects: () => `
+    <div class="my-3">
+      <p class="mt-2 font-semibold uppercase">projects:</p>
+      <p class="mt-1 mx-3 text-justify w-11/12 sm:w-9/12 xl:w-1/2">
+        <span class="skill">Video On Demand App</span> <span class="description">2022 - Ongoing, Latin America</span><br />
+        Streaming cross-platform application for hispanic content like movies,
+        series or documentaries. Available for Android, Android TV, iOS, Roku, Tizen, Web and WebOS.
+        For backend i used Event Drive Micro-Services with NodeJS and RabbitMQ, and for Frontend i used
+        React for Web and React Native for Smart TV apps.
+      </p>
+      <p class="my-5 mx-3 text-justify w-11/12 sm:w-9/12 xl:w-1/2">
+        <span class="skill">Harvest App</span> <span class="description">2021, Chile</span><br />
+        Agricultural mobile application used for harvest assistance. Support offline work with automatic and
+        manual synchronization. Also, send reports to admins by email. Develop in NodeJS with micro-services
+        architecture and deployed on AWS.
+      </p>
+      <p class="my-5 mx-3 text-justify w-11/12 sm:w-9/12 xl:w-1/2">
+        <span class="skill">Healthcare App for COVID-19</span> <span class="description">2020, Chile</span><br />
+        Mobile application with bluetooth protocol to keep distance and track proximity in private companies
+        on pandemic context. Develop with Golang to fast data processing.
+      </p>
+      <p class="my-5 mx-3 text-justify w-11/12 sm:w-9/12 xl:w-1/2">
+        <span class="skill">Survey Engine</span> <span class="description">2019, Chile</span><br />
+        Web services to make and answers surveys integrated with blockchain technologies to sign data.
+      </p>
+      <p class="my-5 mx-3 text-justify w-11/12 sm:w-9/12 xl:w-1/2">
+        <span class="skill">Health Centers App</span> <span class="description">2019, Chile</span><br />
+        Web application for Chilean health plans and health centers information using
+        browser location to display better places to receive medical attention.
+      </p>
+    </div>
+  `,
   runResume: () => `
     <div class="my-3">
       <p class="mt-2 font-semibold uppercase">resume:</p>
@@ -97,8 +125,9 @@ const implementations = {
         software systems.
       </p>
       <p class="my-5 description">
-        For more information you can run <span class="command text-shadow">'skills'</span>
-        or <span class="command text-shadow">'projects'</span> commands.
+        For more information you can type <span class="command text-shadow">'skills'</span>,
+        <span class="command text-shadow">'projects'</span> or
+        <span class="command text-shadow">'social'</span>.
       </p>
     </div>
   `,
@@ -129,10 +158,25 @@ const implementations = {
       </p>
     </div>
   `,
-  runSocial: () => {
-    // WIP
-    return 'Work in progress...';
-  },
+  runSocial: () => `
+    <div class="my-3">
+      <p class="mt-2 font-semibold uppercase">social networks:</p>
+      <ul class="ml-5">
+        <li>
+          <div class="grid grid-cols-6 xl:grid-cols-10 gap-5">
+            <div class="font-medium">GitHub</div>
+            <p class="col-span-5 xl:col-span-5 description">https://github.com/jnaxo</p>
+          </div>
+        </li>
+        <li>
+          <div class="grid grid-cols-6 xl:grid-cols-10 gap-5">
+            <div class="font-medium">Linkedin</div>
+            <p class="col-span-5 xl:col-span-5 description">https://www.linkedin.com/in/j-ignacio-fuentes-348382117</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  `,
   runWelcome: () => `
   <p class="my-2 font-semibold text-xl">Welcome to my portfolio!</p>
   <p class="mb-2">
