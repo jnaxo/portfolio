@@ -97,8 +97,8 @@ const implementations = {
         software systems.
       </p>
       <p class="my-5 description">
-        For more information you can run <span class="command text-shadow">skills</span>
-        or <span class="command text-shadow">projects</span> commands.
+        For more information you can run <span class="command text-shadow">'skills'</span>
+        or <span class="command text-shadow">'projects'</span> commands.
       </p>
     </div>
   `,
@@ -134,9 +134,13 @@ const implementations = {
     return 'Work in progress...';
   },
   runWelcome: () => `
-  <p>
-    Welcome to my portfolio web page. <br />
-    Type <span class="command text-shadow">'help'</span> to see list of available commands.
+  <p class="my-2 font-semibold text-xl">Welcome to my portfolio!</p>
+  <p class="mb-2">
+    I am Juan Ignacio Fuentes, Technical Lead & Senior Developer.<br />
+    Just for starters you can use <span class="command text-shadow">'resume'</span> command.
+  </p>
+  <p class="mb-2 description">
+    Also, you can type <span class="command text-shadow">'help'</span> to see list of available commands.
   </p>
   `
 };
@@ -149,7 +153,7 @@ export const runCommand: RunCommandFunc = (statement, callback) => {
     return '';
   }
   if (!Object.keys(commands).some(k => k === command)) {
-    return 'error: command not found!';
+    return `command not found: ${command}`;
   }
   const selectedCommand = commands[command as keyof typeof commands];
   return implementations[selectedCommand.func as keyof typeof implementations](args, callback || (() => { }));
