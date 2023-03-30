@@ -133,7 +133,20 @@ const implementations = {
   `,
   runSkills: () => `
     <div class="my-3">
-      <p class="mt-2 font-semibold uppercase">skills:</p>
+      <p class="mt-2 font-semibold uppercase">Programming languages:</p>
+      <p class="mt-1 mx-3 w-11/12 sm:w-9/12 xl:w-1/2">
+        <span class="skill">C</span>
+        <span class="skill">C++</span>
+        <span class="skill">GO</span>
+        <span class="skill">Java</span>
+        <span class="skill">Javascript</span>
+        <span class="skill">Kotlin</span>
+        <span class="skill">PHP</span>
+        <span class="skill">Python</span>
+        <span class="skill">SQL</span>
+        <span class="skill">Typescript</span>
+      </p>
+      <p class="mt-2 font-semibold uppercase">Technologies:</p>
       <p class="mt-1 mx-3 w-11/12 sm:w-9/12 xl:w-1/2">
         <span class="skill">AWS</span>
         <span class="skill">Bash</span>
@@ -165,13 +178,25 @@ const implementations = {
         <li>
           <div class="grid grid-cols-6 xl:grid-cols-10 gap-5">
             <div class="font-medium">GitHub</div>
-            <p class="col-span-5 xl:col-span-5 description">https://github.com/jnaxo</p>
+            <a
+              class="col-span-5 xl:col-span-5 description hover:text-white hover:text-shadow"
+              href="https://github.com/jnaxo"
+              target="_blank"
+            >
+              https://github.com/jnaxo
+            </a>
           </div>
         </li>
         <li>
           <div class="grid grid-cols-6 xl:grid-cols-10 gap-5">
             <div class="font-medium">Linkedin</div>
-            <p class="col-span-5 xl:col-span-5 description">https://www.linkedin.com/in/j-ignacio-fuentes-348382117</p>
+            <a
+              class="col-span-5 xl:col-span-5 description hover:text-white hover:text-shadow"
+              href="https://www.linkedin.com/in/j-ignacio-fuentes-348382117"
+              target="_blank"
+            >
+              https://www.linkedin.com/in/j-ignacio-fuentes-348382117
+            </a>
           </div>
         </li>
       </ul>
