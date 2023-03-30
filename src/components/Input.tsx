@@ -64,7 +64,7 @@ const Input = ({ history, onCommand }: InputProps) => {
 
   return (
     <div className="flex">
-      <span className="mr-2 text-custom-primary">guest@zeek.com:~$</span>
+      <span className="mr-2 text-custom-primary">guest@portfolio:~$</span>
       <div ref={sentenceRef}>{command}</div>
       <div
         className="cursor"

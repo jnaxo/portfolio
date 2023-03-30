@@ -11,6 +11,14 @@
     @apply
     text-gray-400
   }
+  .skill {
+    @apply
+    break-keep
+    font-semibold
+    leading-6
+    mr-4
+    underline
+  }
 }
 
 * {
