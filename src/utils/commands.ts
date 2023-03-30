@@ -75,7 +75,7 @@ const implementations = {
         <span class="skill">Video On Demand App</span> <span class="description">2022 - Ongoing, Latin America</span><br />
         Streaming cross-platform application for hispanic content like movies,
         series or documentaries. Available for Android, Android TV, iOS, Roku, Tizen, Web and WebOS.
-        For backend i used Event Drive Micro-Services with NodeJS and RabbitMQ, and for Frontend i used
+        I develop backend using Event-Driven Microservices with NodeJS and RabbitMQ, and Frontend using
         React for Web and React Native for Smart TV apps.
       </p>
       <p class="my-5 mx-3 text-justify w-11/12 sm:w-9/12 xl:w-1/2">
@@ -87,11 +87,12 @@ const implementations = {
       <p class="my-5 mx-3 text-justify w-11/12 sm:w-9/12 xl:w-1/2">
         <span class="skill">Healthcare App for COVID-19</span> <span class="description">2020, Chile</span><br />
         Mobile application with bluetooth protocol to keep distance and track proximity in private companies
-        on pandemic context. Develop with Golang to fast data processing.
+        on pandemic context. Develop with Golang for data processing.
       </p>
       <p class="my-5 mx-3 text-justify w-11/12 sm:w-9/12 xl:w-1/2">
         <span class="skill">Survey Engine</span> <span class="description">2019, Chile</span><br />
-        Web services to make and answers surveys integrated with blockchain technologies to sign data.
+        Web services to make and answer surveys integrated with blockchain technologies for data sign.
+        Made with micro-services in NodeJS.
       </p>
       <p class="my-5 mx-3 text-justify w-11/12 sm:w-9/12 xl:w-1/2">
         <span class="skill">Health Centers App</span> <span class="description">2019, Chile</span><br />
@@ -116,17 +117,17 @@ const implementations = {
         of the applications.
       </p>
       <p class="my-5 mx-3 text-justify w-11/12 sm:w-9/12 xl:w-1/2">
-        There, I made an automatization process for developments, deployments
-        and tests using continuous integration tools.
+        There, I made automatization processes for developments, deployments
+        and testing using continuous integration tools.
       </p>
       <p class="my-5 mx-3 text-justify w-11/12 sm:w-9/12 xl:w-1/2">
-        I have the job of technical lead where i use Scrum in teams up
-        to 8 people. Also, i design architecture solutions for the
+        Actually I have a job as technical lead where i use Scrum in teams up
+        to 8 people. Also, i design and implement architecture solutions for the
         software systems.
       </p>
       <p class="my-5 description">
         For more information you can type <span class="command text-shadow">'skills'</span>,
-        <span class="command text-shadow">'projects'</span> or
+        <span class="command text-shadow">'projects'</span> and
         <span class="command text-shadow">'social'</span>.
       </p>
     </div>
@@ -165,7 +166,7 @@ const implementations = {
         <span class="skill">React</span>
         <span class="skill">React Native</span>
         <span class="skill">Scrum</span>
-        <span class="skill">Smart TV</span>
+        <span class="skill">SmartTV</span>
         <span class="skill">Terraform</span>
         <span class="skill">VueJS</span>
       </p>
