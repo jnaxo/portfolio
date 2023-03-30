@@ -6,6 +6,7 @@ import { runCommand } from '../utils';
 const Terminal = () => {
   const firstRender = useRef(true);
   const outputRef = useRef<HTMLInputElement>(null);
+  const screenRef = useRef<HTMLInputElement>(null);
   const [history, setHistory] = useState<string[]>([]);
   const [output, setOutput] = useState('');
 
@@ -35,10 +36,18 @@ const Terminal = () => {
   useEffect(executeScroll, [output]);
 
   return (
-    <div className="overflow-y-auto max-h-full leading-relaxed text-gray-200">
+    <div
+      className="overflow-y-auto h-full max-h-full leading-relaxed text-gray-200"
+      onClick={() => {
+        const selection = window.getSelection();
+        if (selection?.type !== 'Range') {
+          screenRef.current?.focus();
+        }
+      }}
+    >
       <div className="mb-2" dangerouslySetInnerHTML={{ __html: output }} />
       <div ref={outputRef}>
-        <Input history={[...history, ''].reverse()} onCommand={handleCommand} />
+        <Input history={[...history, ''].reverse()} ref={screenRef} onCommand={handleCommand} />
       </div>
     </div>
   );

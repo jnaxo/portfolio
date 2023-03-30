@@ -1,23 +1,26 @@
-import type { ChangeEventHandler, FocusEventHandler, KeyboardEventHandler } from 'react';
+import type { ChangeEventHandler, FocusEventHandler, ForwardedRef, KeyboardEventHandler } from 'react';
 
-import { useEffect, useRef, useState } from 'react';
+import { forwardRef, useEffect, useRef, useState } from 'react';
 
 type InputProps = {
   history: string[];
   onCommand: Function;
 };
 
-const Input = ({ history, onCommand }: InputProps) => {
+const Input = ({ history, onCommand }: InputProps, inputRef: ForwardedRef<HTMLInputElement>) => {
   const sentenceRef = useRef<HTMLInputElement>(null);
   const [caretPosition, setCaretPosition] = useState(0);
   const [containerWidth, setContainerWidth] = useState(0);
   const [command, setCommand] = useState('');
   const [historyCursor, setHistoryCursor] = useState<number>(0);
+  const [showCaret, setShowCaret] = useState(true);
 
-  const handleInputBlur: FocusEventHandler<HTMLInputElement> = event => {
-    event.preventDefault();
-    const target = event.currentTarget;
-    setTimeout(() => target.focus(), 10);
+  const handleInputBlur: FocusEventHandler<HTMLInputElement> = () => {
+    setShowCaret(false);
+  };
+
+  const handleInputFocus: FocusEventHandler<HTMLInputElement> = () => {
+    setShowCaret(true);
   };
 
   const handleInputChange: ChangeEventHandler<HTMLInputElement> = event => {
@@ -66,19 +69,23 @@ const Input = ({ history, onCommand }: InputProps) => {
     <div className="flex">
       <span className="mr-2 text-custom-primary">guest@portfolio:~$</span>
       <div ref={sentenceRef}>{command}</div>
-      <div
-        className="cursor"
-        style={{
-          // TODO: Move caret require improvement
-          left: (command.length ? containerWidth / command.length : 0) * caretPosition
-        }}
-      />
+      {showCaret && (
+        <div
+          className="cursor"
+          style={{
+            // TODO: Move caret require improvement
+            left: (command.length ? containerWidth / command.length : 0) * caretPosition
+          }}
+        />
+      )}
       <input
         autoFocus
         className="w-0"
         onBlur={handleInputBlur}
+        onFocus={handleInputFocus}
         onChange={handleInputChange}
         onKeyDown={handleKeyDown}
+        ref={inputRef}
         style={{ position: 'absolute', left: '-1000px' }}
         type="text"
         value={command}
@@ -87,4 +94,4 @@ const Input = ({ history, onCommand }: InputProps) => {
   );
 };
 
-export default Input;
+export default forwardRef(Input);
