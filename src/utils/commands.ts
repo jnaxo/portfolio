@@ -111,7 +111,7 @@ const implementations = {
         high-quality standards.
       </p>
       <p class="my-5 mx-3 text-justify w-11/12 sm:w-9/12 xl:w-1/2">
-        I work in a software factory company in Valparaíso, in which i developed
+        I work in a software factory company in Valparaíso, in which I developed
         cloud systems using Amazon Web Services infrastructure,
         optimizing costs, improves scalability and maintainability
         of the applications.
@@ -121,8 +121,8 @@ const implementations = {
         and testing using continuous integration tools.
       </p>
       <p class="my-5 mx-3 text-justify w-11/12 sm:w-9/12 xl:w-1/2">
-        Actually I have a job as technical lead where i use Scrum in teams up
-        to 8 people. Also, i design and implement architecture solutions for the
+        Actually I have a job as technical lead where I use Scrum in teams up
+        to 8 people. Also, I design and implement architecture solutions for the
         software systems.
       </p>
       <p class="my-5 description">

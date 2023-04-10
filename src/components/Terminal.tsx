@@ -38,7 +38,7 @@ const Terminal = () => {
   return (
     <div
       className="overflow-y-auto h-full max-h-full leading-relaxed text-gray-200"
-      onClick={() => {
+      onMouseUp={() => {
         const selection = window.getSelection();
         if (selection?.type !== 'Range') {
           screenRef.current?.focus();
