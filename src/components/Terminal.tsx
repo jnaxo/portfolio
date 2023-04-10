@@ -9,17 +9,19 @@ const Terminal = () => {
   const screenRef = useRef<HTMLInputElement>(null);
   const [history, setHistory] = useState<string[]>([]);
   const [output, setOutput] = useState('');
+  const [selectedLang, setSelectedLang] = useState('en');
 
   const handleCommand = (input: string) => {
     if (input !== '') {
       setHistory(prev => [...prev, input]);
     }
     const statement = input === 'history' ? `${input} ${history.join('<>')}` : input;
+    const callback = input.split(' ')[0] === 'lang' ? setSelectedLang : setOutput;
     setOutput(
       prev => `
       ${prev}
       <div class="mt-1"><span class="text-lime-500">❯</span> ${input}</div>
-      <div class="mb-1">${runCommand(statement, setOutput)}</div>
+      <div class="mb-1">${runCommand(selectedLang)(statement, callback)}</div>
     `
     );
   };
@@ -28,7 +30,7 @@ const Terminal = () => {
 
   useEffect(() => {
     if (firstRender.current) {
-      setOutput(`<div class="my-2">${runCommand('welcome')}</div>`);
+      setOutput(`<div class="my-2">${runCommand(selectedLang)('welcome')}</div>`);
     }
     firstRender.current = false;
   }, []);
