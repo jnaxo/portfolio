@@ -98,7 +98,7 @@ const implementations = (lang = '') => {
           return LANG_COMMAND.NOT_IMPLEMENTED;
         }
         callback(args);
-        return texts(lang).LANG_COMMAND.CHANGED;
+        return texts(args).LANG_COMMAND.CHANGED;
       }
       return `
         ${LANG_COMMAND.DESCRIPTION}<br />

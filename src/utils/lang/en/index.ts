@@ -7,9 +7,9 @@ export const HELP_COMMAND = {
   CLEAR_DESCRIPTION: 'Clear the terminal screen.',
   HELP_DESCRIPTION: 'Show a list of available commands.',
   HISTORY_DESCRIPTION: 'View command history.',
-  LANG_DESCRIPTION: 'List or change the site language.',
+  LANG_DESCRIPTION: 'List or change the terminal language.',
   PROJECTS_DESCRIPTION: 'Describe my participation on relevant projects.',
-  RESUME_DESCRIPTION: 'A resume about me.',
+  RESUME_DESCRIPTION: 'Resume about me.',
   SKILLS_DESCRIPTION: 'Show a list of my main skills.',
   SOCIAL_DESCRIPTION: 'Links of my social networks.',
   TITLE: 'commands:',
@@ -17,9 +17,9 @@ export const HELP_COMMAND = {
 };
 
 export const LANG_COMMAND = {
-  CHANGED: 'Language changed to English.',
+  CHANGED: 'Language changed to English',
   DESCRIPTION: `Select a language of the following list`,
-  NOT_IMPLEMENTED: 'The lang selected is not implemented.',
+  NOT_IMPLEMENTED: 'The language selected is not implemented.',
   TITLE: 'languages:',
   FOOTER: `Type '<span class="command text-shadow">lang</span> [selection]'.`
 };
@@ -53,18 +53,14 @@ export const PROJECTS_COMMAND = {
 
 export const RESUME_COMMAND = {
   FOOTER: `For more information you can type <span class="command text-shadow">'skills'</span>,
-  <span class="command text-shadow">'projects'</span> and
-  <span class="command text-shadow">'social'</span>.`,
-  PARAPH_1: `I am a software engineer with experience leading
-  development teams, developing and implementing
-  information systems with moderns technologies and
-  high-quality standards.`,
-  PARAPH_2: `I work in a software factory company in Valparaíso, in which I developed
-  cloud systems using Amazon Web Services infrastructure,
-  optimizing costs, improves scalability and maintainability
+  <span class="command text-shadow">'projects'</span> and <span class="command text-shadow">'social'</span>.`,
+  PARAPH_1: `I am a Software Engineer with experience leading development teams, developing and implementing
+  information systems with moderns technologies and high-quality standards.`,
+  PARAPH_2: `I work in a software factory company in Valparaíso, in which I developed cloud systems
+  using Amazon Web Services infrastructure, optimizing costs, improves scalability and maintainability
   of the applications.`,
-  PARAPH_3: `There, I made automatization processes for developments, deployments
-  and testing using continuous integration tools.`,
+  PARAPH_3: `There, I made automatization processes for developments, deployments and testing
+  using continuous integration tools.`,
   PARAPH_4: `Actually I have a job as technical lead where I use Scrum in teams up
   to 8 people. Also, I design and implement architecture solutions for the
   software systems.`,
@@ -83,6 +79,7 @@ export const SOCIAL_COMMAND = {
 export const WELCOME_COMMAND = {
   CONTENT: `I am Juan Ignacio Fuentes, Technical Lead & Senior Developer.<br />
   Just for starters you can use <span class="command text-shadow">'resume'</span> command.`,
-  FOOTER: `Also, you can type <span class="command text-shadow">'help'</span> to see list of available commands.`,
+  FOOTER: `Type <span class="command text-shadow">'lang'</span> to change language.<br />
+  Also you can type <span class="command text-shadow">'help'</span> to see list of available commands.`,
   HEADER: 'Welcome to my portfolio!'
 };

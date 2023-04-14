@@ -55,7 +55,7 @@ const Input = ({ history, onCommand }: InputProps, inputRef: ForwardedRef<HTMLIn
       return false;
     } else if (event.key === 'ArrowLeft') {
       setCaretPosition(prev => (prev > command.length * -1 ? prev - 1 : command.length * -1));
-    } else if (event.key === 'ArrowRight' || event.key === 'Delete') {
+    } else if (event.key === 'ArrowRight' || event.key === 'Delete') { // or space
       setCaretPosition(prev => (prev < 0 ? prev + 1 : 0));
     }
   };
