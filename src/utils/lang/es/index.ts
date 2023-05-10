@@ -47,7 +47,7 @@ export const PROJECTS_COMMAND = {
   TITLE: 'proyectos:',
   VOD_DATE: '2022 - Actualmente, Latino América',
   VOD_DESCRIPTION: `Aplicación multiplataforma de streaming con contenido hispano tal como peliculas, series y
-  documentales. Disponeble en Android, Android TV, iOS, Roku, Tizen, Web and WebOS. El backen se desarrolló
+  documentales. Disponeble en Android, Android TV, iOS, Roku, Tizen, Web and WebOS. El backend se desarrolló
   usando Event-Driven Microservices con NodeJS y RabbitMQ, el Frontend usando React para Web y React Native
   para las aplicaciones Smart TV.`,
   VOD_TITLE: 'Aplicación de Video on Demand'
@@ -56,15 +56,15 @@ export const PROJECTS_COMMAND = {
 export const RESUME_COMMAND = {
   FOOTER: `Para más información puedes usar los comandos <span class="command text-shadow">'skills'</span>,
   <span class="command text-shadow">'projects'</span> y <span class="command text-shadow">'social'</span>.`,
-  PARAPH_1: `Soy Ingeniero de Software con experiencia liderando equipos, desarrollando e implementand
+  PARAPH_1: `Soy Ingeniero de Software con experiencia liderando equipos, desarrollando e implementando
   sistemas de información usando tecnologías modernas y altos estándares de calidad.`,
   PARAPH_2: `Trabajo en una compañía de software factory en Valparaíso, en donde desarrollo
   sistemas en la nube usando infraestructura con Amazon Web Services, optimizando costos, optimizando
   la escalabilidad y mantenibilidad de las aplicaciones.`,
   PARAPH_3: `Ahí realicé la automatización de procesos de desarrollo, despliegue y pruebas usando
-  herramientas de integración continua`,
+  herramientas de integración continua.`,
   PARAPH_4: `Actualmente trabajo como technical lead donde uso Scrum en equipos de hasta 8 personas.
-  También, Diseño e implemento soluciones de arquitectura para el software aplicado en diversas áreas.`,
+  También, Diseño e implemento soluciones de arquitectura para software aplicado en diversas áreas.`,
   TITLE: 'resumen:'
 };
 
