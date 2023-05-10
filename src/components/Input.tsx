@@ -80,7 +80,7 @@ const Input = ({ history, onCommand }: InputProps, inputRef: ForwardedRef<HTMLIn
       )}
       <input
         autoFocus
-        className="w-0"
+        className="w-1"
         onBlur={handleInputBlur}
         onFocus={handleInputFocus}
         onChange={handleInputChange}
